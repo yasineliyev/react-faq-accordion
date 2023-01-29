@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>FAQ App</h1>
+      <h1>FAQ Apppp</h1>
       {questions.map(({ title, id, answer }) => (
         <Accordion
           key={id}
