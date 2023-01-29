@@ -1,38 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
+  padding: 2rem 0;
+  background: #edeef1;
+  letter-spacing: 1.3px;
+  background: #59c173; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5d26c1,
+    #a17fe0,
+    #59c173
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5d26c1,
+    #a17fe0,
+    #59c173
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h1 {
+  margin: 1rem;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.container {
+  width: 100%;
+  max-width: 48rem;
+  margin: auto;
+  font-family: "Antic Slab", serif;
+}
+.accordion {
+  width: 100%;
+  max-width: 54rem;
+  margin: 1.8rem auto;
+  background-color: #f1f0c0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0.5rem 1.5rem;
+}
+.accordionHeading .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.accordionHeading {
+  background: #b7e5dd;
+  padding: 1.4rem 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordionHeading p {
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: black;
+  font-size: 1.6rem;
+}
+.accordionHeading span {
+  cursor: pointer;
+  color: green;
+  border: 1px solid green;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in;
+}
+.accordionHeading span:hover {
+  background-color: rgba(0, 128, 0, 0.519);
+  color: #b7e5dd;
+}
+.accordionContent {
+  background: #2fa4ff;
+  height: 0;
+  opacity: 0;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+.accordionContent.show {
+  height: 18rem;
+  opacity: 1;
+}
+.accordionContent p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: rgb(45, 5, 5);
 }
